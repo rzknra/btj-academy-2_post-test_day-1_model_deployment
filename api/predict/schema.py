@@ -1,17 +1,15 @@
-# File schema.py digunakan untuk validasi input dan output
-
-# Impor library yang diperlukan
+# Import library yang dibutuhkan
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-# Definisikan skema input untuk permintaan prediksi
+# Model untuk input prediksi
 class PredictionParams(BaseModel):
-    sepal_length: int = 0
-    sepal_width: int = 0
-    petal_length: int = 0
-    petal_width: int = 0
+    sepal_length: float = Field(..., ge=0, description="Sepal length dalam cm (>=0)")
+    sepal_width:  float = Field(..., ge=0, description="Sepal width dalam cm (>=0)")
+    petal_length: float = Field(..., ge=0, description="Petal length dalam cm (>=0)")
+    petal_width:  float = Field(..., ge=0, description="Petal width dalam cm (>=0)")
 
-# Definisikan skema output untuk hasil prediksi
+# Model untuk output prediksi
 class PredictionResult(BaseModel):
     message: str
-    result: List[int]
+    result: List[float] = []
