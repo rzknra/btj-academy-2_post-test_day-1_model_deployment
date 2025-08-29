@@ -1,6 +1,6 @@
 # 🚀 Model Deployment with FastAPI & MLflow
 
-Halo! 👋 Repo ini aku buat sebagai latihan **deployment model machine learning** pake **FastAPI**, **MLflow**, dan **Streamlit**. Strukturnya sengaja dibikin **modular** biar gampang dipahami, di-maintain, dan dikembangin.
+Halo! 👋 Repo ini aku buat untuk latihan **deployment model machine learning** pake **FastAPI**, **MLflow**, dan **Streamlit**. Strukturnya sengaja dibikin **modular** biar gampang dipahami, di-maintain, dan dikembangin.
 
 ---
 
@@ -93,7 +93,7 @@ POST-TEST_MODEL-DEPLOYMENT/
 * `POST /api/predict/views` → Prediksi backend
 
 ---
-## 🖥️ Contoh Hasil Prediksi
+## 🖥️ Contoh Prediksi
 <img src="https://github.com/user-attachments/assets/6864f660-b2a6-444a-b727-4bf56e3e8613" alt="Screenshot 2025-08-29 105848" style="max-width: 100%; height: auto;" />
 
 
