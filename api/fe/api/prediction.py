@@ -12,9 +12,18 @@ load_dotenv(dotenv_path=".dev.env")
 URL = os.getenv("APP_HOST")
 PORT = os.getenv("APP_PORT")
 
-# Endpoint untuk prediksi
+# Endpoint untuk prediksi manual
 def get_pred(data: Dict):
     req = requests.post(url=f"http://{URL}:{PORT}/predict", json=data)
+    result = req.json()
+
+    message = result.get("message", "")
+    result = result.get("result", [])
+    return message, result
+
+# Endpoint untuk prediksi MLflow
+def get_pred_mlflow(data: Dict):
+    req = requests.post(url=f"http://{URL}:{PORT}/predict_mlflow", json=data)
     result = req.json()
 
     message = result.get("message", "")
